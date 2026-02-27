@@ -1,0 +1,14 @@
+DimFecha = 
+VAR FechaInicio = DATE(2020, 1, 1)
+VAR FechaFin = DATE(2026, 12, 31)
+RETURN
+ADDCOLUMNS (
+    CALENDAR(FechaInicio, FechaFin),
+    "Año", YEAR([Date]),
+    "Mes Nro", MONTH([Date]),
+    "Mes Nombre", FORMAT([Date], "MMMM"),
+    "Trimestre", "T" & FORMAT([Date], "Q"),
+    "Día Semana Nro", WEEKDAY([Date], 2),
+    "Día Semana Nombre", FORMAT([Date], "dddd"),
+    "AñoMes", FORMAT([Date], "YYYY-MM")
+)

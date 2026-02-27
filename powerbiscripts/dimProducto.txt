@@ -1,0 +1,1 @@
+DimProducto = FILTER(DISTINCT(salida_costumer[product_name]), NOT ISBLANK(salida_costumer[product_name]))
